@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de commande</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Commander un sandwich</h1>
+        <form id="commandeForm">
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="sauces">Sauces:</label>
+            <div id="saucesContainer">
+                <input type="checkbox" id="mayonnaise" name="sauces" value="Mayonnaise">
+                <label for="mayonnaise">Mayonnaise</label><br>
+                <input type="checkbox" id="ketchup" name="sauces" value="Ketchup">
+                <label for="ketchup">Ketchup</label><br>
+                <input type="checkbox" id="algerienne" name="sauces" value="Algérienne">
+                <label for="algerienne">Algérienne</label><br>
+                <input type="checkbox" id="samourai" name="sauces" value="Samourai">
+                <label for="samourai">Samourai</label><br>
+                <input type="checkbox" id="harissa" name="sauces" value="Harissa">
+                <label for="harissa">Harissa</label><br>
+            </div>
+            <div class="selected-options" id="selected-sauces"></div>
+
+            <label for="ingredients">Ingrédients:</label>
+            <div id="ingredientsContainer">
+                <input type="checkbox" id="salade" name="ingredients" value="Salade">
+                <label for="salade">Salade</label><br>
+                <input type="checkbox" id="tomate" name="ingredients" value="Tomate">
+                <label for="tomate">Tomate</label><br>
+                <input type="checkbox" id="oignons" name="ingredients" value="Oignons">
+                <label for="oignons">Oignons</label><br>
+                <input type="checkbox" id="fromage" name="ingredients" value="Fromage">
+                <label for="fromage">Fromage</label><br>
+            </div>
+
+            <div class="selected-options" id="selected-ingredients"></div>
+            <label for="proteines">Protéines:</label>
+            <select id="proteines" name="proteines" multiple required>
+                <option value="Jambon">Jambon</option>
+                <option value="Poulet">Poulet</option>
+            </select>
+
+            <button type="submit">Commander</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
