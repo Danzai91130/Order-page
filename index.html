@@ -29,7 +29,7 @@
                 <input type="checkbox" id="harissa" name="sauces" value="Harissa">
                 <label for="harissa">Harissa</label><br>
             </div>
-            <div class="selected-options" id="selected-sauces"></div>
+
 
             <label for="ingredients">Ingrédients:</label>
             <div id="ingredientsContainer">
@@ -43,13 +43,21 @@
                 <label for="fromage">Fromage</label><br>
             </div>
 
-            <div class="selected-options" id="selected-ingredients"></div>
             <label for="proteines">Protéines:</label>
             <select id="proteines" name="proteines" multiple required>
                 <option value="Jambon">Jambon</option>
                 <option value="Poulet">Poulet</option>
             </select>
-
+            <div class="options-container">
+                <div id="saucesContainer" class="selection-container">
+                    <!-- Sauce checkboxes -->
+                </div>
+                <div id="ingredientsContainer" class="selection-container">
+                    <!-- Ingredient checkboxes -->
+                </div>
+            </div>
+            <div class="selected-options" id="selected-sauces"></div>
+            <div class="selected-options" id="selected-ingredients"></div>
             <button type="submit">Commander</button>
         </form>
     </div>

@@ -45,4 +45,15 @@ button:hover {
     background-color: #0056b3;
 }
 
+.options-container {
+    display: flex;
+    justify-content: space-between;
+}
 
+.selection-container {
+    width: 45%; /* Adjust width as needed */
+}
+
+.selected-options {
+    margin-top: 10px;
+}
