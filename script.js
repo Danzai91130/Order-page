@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('commandeForm');
     const selectedSauces = document.getElementById('selected-sauces');
     const selectedIngredients = document.getElementById('selected-ingredients');
+    const selectedProteines = document.getElementById('selected-proteines');
+    const selectedOptionsDiv = document.getElementById('selected-options');
 
     const updateSelectedOptions = function(container, inputName) {
         const checkboxes = form.querySelectorAll(`input[name="${inputName}"]:checked`);
@@ -9,6 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
         checkboxes.forEach(function(checkbox) {
             const label = document.createElement('label');
             label.textContent = checkbox.value;
+            const img = document.createElement('img');
+            img.src = `data/${inputName}/${checkbox.value.toLowerCase()}.jpeg`; // Assuming the image names match the checkbox values
+            img.alt = `${checkbox.value} Image`;
+            label.appendChild(img);
             container.appendChild(label);
         });
     };
@@ -20,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 updateSelectedOptions(selectedSauces, 'sauces');
             } else if (target.name === 'ingredients') {
                 updateSelectedOptions(selectedIngredients, 'ingredients');
+            } else if (target.name === 'proteines') {
+                updateSelectedOptions(selectedProteines, 'proteines');
             }
         }
     });
@@ -34,4 +42,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Trigger initial update of selected options
     updateSelectedOptions(selectedSauces, 'sauces');
     updateSelectedOptions(selectedIngredients, 'ingredients');
+    updateSelectedOptions(selectedProteines, 'proteines');
 });

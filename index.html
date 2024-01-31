@@ -8,58 +8,73 @@
 </head>
 <body>
     <div class="container">
-        <h1>Commander un sandwich</h1>
-        <form id="commandeForm">
-            <label for="nom">Nom:</label>
-            <input type="text" id="nom" name="nom" required>
+        <div class="left">
+            <h1>Commander un sandwich</h1>
+            <form id="commandeForm">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="sauces">Sauces:</label>
-            <div id="saucesContainer">
-                <input type="checkbox" id="mayonnaise" name="sauces" value="Mayonnaise">
-                <label for="mayonnaise">Mayonnaise</label><br>
-                <input type="checkbox" id="ketchup" name="sauces" value="Ketchup">
-                <label for="ketchup">Ketchup</label><br>
-                <input type="checkbox" id="algerienne" name="sauces" value="Algérienne">
-                <label for="algerienne">Algérienne</label><br>
-                <input type="checkbox" id="samourai" name="sauces" value="Samourai">
-                <label for="samourai">Samourai</label><br>
-                <input type="checkbox" id="harissa" name="sauces" value="Harissa">
-                <label for="harissa">Harissa</label><br>
-            </div>
-
-
-            <label for="ingredients">Ingrédients:</label>
-            <div id="ingredientsContainer">
-                <input type="checkbox" id="salade" name="ingredients" value="Salade">
-                <label for="salade">Salade</label><br>
-                <input type="checkbox" id="tomate" name="ingredients" value="Tomate">
-                <label for="tomate">Tomate</label><br>
-                <input type="checkbox" id="oignons" name="ingredients" value="Oignons">
-                <label for="oignons">Oignons</label><br>
-                <input type="checkbox" id="fromage" name="ingredients" value="Fromage">
-                <label for="fromage">Fromage</label><br>
-            </div>
-
-            <label for="proteines">Protéines:</label>
-            <select id="proteines" name="proteines" multiple required>
-                <option value="Jambon">Jambon</option>
-                <option value="Poulet">Poulet</option>
-            </select>
-            <div class="options-container">
+                <label for="sauces">Sauces:</label>
                 <div id="saucesContainer" class="selection-container">
-                    <!-- Sauce checkboxes -->
+                    <input type="checkbox" id="mayonnaise" name="sauces" value="Mayonnaise">
+                    <label for="mayonnaise">Mayonnaise</label><br>
+                    <input type="checkbox" id="ketchup" name="sauces" value="Ketchup">
+                    <label for="ketchup">Ketchup</label><br>
+                    <input type="checkbox" id="algerienne" name="sauces" value="Algerienne">
+                    <label for="algerienne">Algerienne</label><br>
+                    <input type="checkbox" id="samourai" name="sauces" value="Samourai">
+                    <label for="samourai">Samourai</label><br>
+                    <input type="checkbox" id="harissa" name="sauces" value="Harissa">
+                    <label for="harissa">Harissa</label><br>
                 </div>
+
+
+                <label for="ingredients">Ingrédients:</label>
                 <div id="ingredientsContainer" class="selection-container">
-                    <!-- Ingredient checkboxes -->
+                    <input type="checkbox" id="salade" name="ingredients" value="Salade">
+                    <label for="salade">Salade</label><br>
+                    <input type="checkbox" id="tomate" name="ingredients" value="Tomate">
+                    <label for="tomate">Tomate</label><br>
+                    <input type="checkbox" id="oignons" name="ingredients" value="Oignons">
+                    <label for="oignons">Oignons</label><br>
+                    <input type="checkbox" id="fromage" name="ingredients" value="Fromage">
+                    <label for="fromage">Fromage</label><br>
+                </div>
+
+                <label for="proteines">Ingrédients:</label>
+                <div id="proteinesContainer" class="selection-container">
+                    <input type="checkbox" id="jambon" name="proteines" value="Jambon">
+                    <label for="jambon">Jambon</label><br>
+                    <input type="checkbox" id="poulet" name="proteines" value="Poulet">
+                    <label for="poulet">Poulet</label><br>
+      
+                </div>
+
+            </div>
+            <div class="right">
+
+
+                <div id="selected-options" class="selected-options">
+                    <div id="selected-sauces">
+                        <h3>Sauces:</h3>
+                        <!-- Images of selected sauces -->
+                    </div>
+                    <div id="selected-ingredients">
+                        <h3>Ingrédients:</h3>
+                        <!-- Images of selected ingredients -->
+                    </div>
+                    <div id="selected-proteines">
+                        <h3>Protéines:</h3>
+                        <!-- Images of selected proteins -->
+                    </div>
                 </div>
             </div>
-            <div class="selected-options" id="selected-sauces"></div>
-            <div class="selected-options" id="selected-ingredients"></div>
             <button type="submit">Commander</button>
         </form>
+
     </div>
 
     <script src="script.js"></script>
